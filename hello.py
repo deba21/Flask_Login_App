@@ -43,9 +43,9 @@ def welcome():
 def valid_login(username, password):
     # mysql
     MYSQL_DATABASE_HOST = os.getenv('IP', '0.0.0.0')
-    MYSQL_DATABASE_USER = 'deba0621'
+    MYSQL_DATABASE_USER = 'xxxxx'
     MYSQL_DATABASE_PASSWORD = ''
-    MYSQL_DATABASE_DB = 'my_flask_app_1'
+    MYSQL_DATABASE_DB = 'xxxx'
     conn = pymysql.connect(
         host=MYSQL_DATABASE_HOST,
         user=MYSQL_DATABASE_USER,
@@ -65,8 +65,7 @@ if __name__ == '__main__':
     host = os.getenv('IP', '0.0.0.0')
     port = int(os.getenv('PORT', 5000))
     #setting degug is True, not for prod as it will slow down the app
-    app.debug = True
-    app.secret_key = '\xd4\x90*\x05\xae\x81\x84\xd8c\xaa\xaa\xc45\xa2\xc9\xa2\xbf\x04t^\x12\x13s\x8e' #os.urandom(24)
+    app.secret_key = '\xd4\x90*\x05\xae\x81\x84\xd8c\xaa\xaa\xc45\xa2\xc9\xa2\xbf\x04t^\x12\x13s\x8e' 
     
     #Logging
     handler = RotatingFileHandler('error.log', maxBytes=10000, backupCount=1)
